@@ -7,7 +7,7 @@ const HomeLayout = ({ children }: { children: ReactNode }) => {
     <main className="relative">
       <Navbar />
 
-      <div className="fex">
+      <div className="flex">
         <Sidebar />
 
         <section

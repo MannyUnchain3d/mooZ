@@ -2,9 +2,12 @@ import MeetingTypeList from "@/components/MeetingTypeList";
 
 const Home = () => {
   const now = new Date();
+  const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;  // Detects the user's local timezone
+
   const time = now.toLocaleTimeString("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: userTimezone,  // Explicitly use the detected timezone
     timeZoneName: "short",
   });
   const date = new Intl.DateTimeFormat("en-GB", {

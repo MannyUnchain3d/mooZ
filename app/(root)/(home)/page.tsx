@@ -12,7 +12,6 @@ const Home = () => {
     const timeString = now.toLocaleTimeString("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
-      timeZoneName: "short",
     });
     const dateString = new Intl.DateTimeFormat("en-GB", {
       dateStyle: "full",

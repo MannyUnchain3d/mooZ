@@ -55,6 +55,14 @@
 
 /* ==== Clerk Class Override ===== */
 
+.cl-navbarButton__account {
+  color: white;
+}
+
+.cl-navbarButton__security {
+  color: white;
+}
+
 .cl-providerIcon__github {
   filter: invert(1);
 }
@@ -84,6 +92,7 @@
 }
 
 .cl-userButtonPopoverActionButton__manageAccount:hover {
+  background: #252a41;
   color: powderblue
 }
 

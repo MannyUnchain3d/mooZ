@@ -1,18 +1,26 @@
+"use client";
+
+import { useState, useEffect } from 'react';
 import MeetingTypeList from "@/components/MeetingTypeList";
 
 const Home = () => {
-  const now = new Date();
-  const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;  // Detects the user's local timezone
+  const [time, setTime] = useState('');
+  const [date, setDate] = useState('');
 
-  const time = now.toLocaleTimeString("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: userTimezone,  // Explicitly use the detected timezone
-    timeZoneName: "short",
-  });
-  const date = new Intl.DateTimeFormat("en-GB", {
-    dateStyle: "full",
-  }).format(now);
+  useEffect(() => {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZoneName: "short",
+    });
+    const dateString = new Intl.DateTimeFormat("en-GB", {
+      dateStyle: "full",
+    }).format(now);
+
+    setTime(timeString);
+    setDate(dateString);
+  }, []);
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">

@@ -55,6 +55,10 @@
 
 /* ==== Clerk Class Override ===== */
 
+.cl-providerIcon__github {
+  filter: invert(1);
+}
+
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
 }
@@ -74,7 +78,30 @@
 .cl-internal-wkkub3 {
   color: white;
 }
+
 .cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButton__manageAccount:hover {
+  color: powderblue
+}
+
+.cl-userButtonPopoverActionButton__signOut:hover {
+  background: #252a41;
+  color: powderblue
+}
+
+.cl-avatarImageActionsUpload {
+  color: white;
+}
+
+.cl-avatarImageActionsUpload:hover {
+  background: #252a41;
+}
+
+.cl-badge {
+  background: #252a41;
   color: white;
 }
 
